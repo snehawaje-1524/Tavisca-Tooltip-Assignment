@@ -1,0 +1,30 @@
+@import "./tooltip-map.scss";
+.tooltip {
+    display: inline-block;
+    font-size: 25px;
+    margin: 5%;
+    position: relative;
+    .tooltip-text {
+        background-color: var(--primary-text);
+        border-radius: 4px;
+        color: var(--neutral);
+        font: var(--global-font-family);
+        line-height: var(--line-height);
+        font-size: var(--caption-font-size);
+        font-weight: var(--font-weight-regular);
+        letter-spacing: 0px;
+        margin-left: 16px;
+        margin-right: 16px;
+        min-height: 54px;
+        min-width: 54px;
+        padding: 8px;
+        position: absolute;
+        visibility: hidden;
+    }
+    &:hover {
+        .tooltip-text {
+            visibility: visible;
+            animation-timing-function: cubic-bezier(0.42, 0, 0.58, 0);
+        }
+    }
+}
